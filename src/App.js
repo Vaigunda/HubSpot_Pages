@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import HubSpotPage from './components/HubSpotPage';
+
+// function App() {
+//   return (
+//     <Router>
+//       <Routes>
+//         {/* Dynamic route for HubSpot pages */}
+//         <Route path="/page/:slug" element={<HubSpotPage />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import HubSpotPage from './components/Hai';
+import HubSpot from './components/HubSpot';
+// import HubSpotPage from './components/HubSpotPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <div className="App">
+    //   <HubSpotPage />
+    // </div>
+
+    <Router>
+      <Routes>
+        {/* Dynamic route for HubSpot pages */}
+        {/* <Route path="/page/:slug" element={<HubSpotPage />} /> */}
+        <Route path="/page/:slug" element={<HubSpot />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
